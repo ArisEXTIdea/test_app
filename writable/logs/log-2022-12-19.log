@@ -1,0 +1,116 @@
+CRITICAL - 2022-12-19 21:45:27 --> Undefined variable: title
+in APPPATH\Views\themes\MainContainer.php on line 9.
+ 1 APPPATH\Views\themes\MainContainer.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\themes\\MainContainer.php', 9, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\themes\\MainContainer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('themes/MainContainer', [], true)
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('\\App\\Modules\\Account\\Views/form_add_page', [], true)
+ 6 APPPATH\Modules\Account\Controllers\AccountC.php(26): view('\\App\\Modules\\Account\\Views/form_add_page')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Modules\Account\Controllers\AccountC->render_add_page()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Account\Controllers\AccountC))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 22:09:51 --> Undefined variable: config
+in APPPATH\Modules\Account\Views\form_add_page.php on line 18.
+ 1 APPPATH\Modules\Account\Views\form_add_page.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: config', 'APPPATH\\Modules\\Account\\Views\\form_add_page.php', 18, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Modules\\Account\\Views\\form_add_page.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('\\App\\Modules\\Account\\Views/form_add_page', [], true)
+ 5 APPPATH\Modules\Account\Controllers\AccountC.php(26): view('\\App\\Modules\\Account\\Views/form_add_page', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Modules\Account\Controllers\AccountC->render_add_page()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Account\Controllers\AccountC))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-12-19 22:16:16 --> mysqli_sql_exception: Table 'dbsiakun.account' doesn't exist in D:\Test\siakun\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Test\siakun\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ac...', 0)
+#1 D:\Test\siakun\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ac...')
+#2 D:\Test\siakun\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ac...')
+#3 D:\Test\siakun\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ac...', Array, false)
+#4 D:\Test\siakun\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\Test\siakun\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 D:\Test\siakun\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\Test\siakun\app\Modules\Account\Models\AccountM.php(21): CodeIgniter\Model->insert(Array)
+#8 D:\Test\siakun\app\Modules\Account\Controllers\AccountC.php(52): App\Modules\Account\Models\AccountM->save_data(Array)
+#9 D:\Test\siakun\system\CodeIgniter.php(927): App\Modules\Account\Controllers\AccountC->save_data_user()
+#10 D:\Test\siakun\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Account\Controllers\AccountC))
+#11 D:\Test\siakun\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\Test\siakun\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-12-19 22:16:16 --> Table 'dbsiakun.account' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `account` (`uid`, `name`, `email`, `password`, `profile_picture`, `address`, `gender`, `status`, `level`) VALUES (\'uid-63a137100db91\', \'Muhammad Aris Widaryani\', \'arisk697@gmail.com\', \'fYiGebDcxRi3kNm\', \'1671509776_9dc4d75ce5e428845544.jpg\', \'Dk Depok Desa Kancilan\', \'L\', \'1\', \'0\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `account` (`uid`, `name`, `email`, `password`, `profile_picture`, `address`, `gender`, `status`, `level`) VALUES (\'uid-63a137100db91\', \'Muhammad Aris Widaryani\', \'arisk697@gmail.com\', \'fYiGebDcxRi3kNm\', \'1671509776_9dc4d75ce5e428845544.jpg\', \'Dk Depok Desa Kancilan\', \'L\', \'1\', \'0\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `account` (`uid`, `name`, `email`, `password`, `profile_picture`, `address`, `gender`, `status`, `level`) VALUES (\'uid-63a137100db91\', \'Muhammad Aris Widaryani\', \'arisk697@gmail.com\', \'fYiGebDcxRi3kNm\', \'1671509776_9dc4d75ce5e428845544.jpg\', \'Dk Depok Desa Kancilan\', \'L\', \'1\', \'0\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `account` (`uid`, `name`, `email`, `password`, `profile_picture`, `address`, `gender`, `status`, `level`) VALUES (:uid:, :name:, :email:, :password:, :profile_picture:, :address:, :gender:, :status:, :level:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Modules\Account\Models\AccountM.php(21): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Modules\Account\Controllers\AccountC.php(52): App\Modules\Account\Models\AccountM->save_data([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Modules\Account\Controllers\AccountC->save_data_user()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Account\Controllers\AccountC))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 22:44:08 --> Undefined index: Level Akun
+in APPPATH\Modules\Account\Views\account_detail_page.php on line 67.
+ 1 APPPATH\Modules\Account\Views\account_detail_page.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: Level Akun', 'APPPATH\\Modules\\Account\\Views\\account_detail_page.php', 67, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Modules\\Account\\Views\\account_detail_page.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('\\App\\Modules\\Account\\Views/account_detail_page', [], true)
+ 5 APPPATH\Modules\Account\Controllers\AccountC.php(56): view('\\App\\Modules\\Account\\Views/account_detail_page', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Modules\Account\Controllers\AccountC->render_account_detail()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Account\Controllers\AccountC))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 22:47:39 --> syntax error, unexpected '?>'
+in APPPATH\Modules\Account\Views\account_detail_page.php on line 67.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('\\App\\Modules\\Account\\Views/account_detail_page', [], true)
+ 3 APPPATH\Modules\Account\Controllers\AccountC.php(56): view('\\App\\Modules\\Account\\Views/account_detail_page', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Modules\Account\Controllers\AccountC->render_account_detail()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Account\Controllers\AccountC))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 23:09:27 --> Undefined offset: 0
+in APPPATH\Modules\Account\Controllers\AccountC.php on line 67.
+ 1 APPPATH\Modules\Account\Controllers\AccountC.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'APPPATH\\Modules\\Account\\Controllers\\AccountC.php', 67, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Modules\Account\Controllers\AccountC->render_edit_profile()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Account\Controllers\AccountC))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 23:09:59 --> Undefined offset: 0
+in APPPATH\Modules\Account\Controllers\AccountC.php on line 67.
+ 1 APPPATH\Modules\Account\Controllers\AccountC.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'APPPATH\\Modules\\Account\\Controllers\\AccountC.php', 67, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Modules\Account\Controllers\AccountC->render_edit_profile()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Account\Controllers\AccountC))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 23:10:07 --> Undefined offset: 0
+in APPPATH\Modules\Account\Controllers\AccountC.php on line 67.
+ 1 APPPATH\Modules\Account\Controllers\AccountC.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'APPPATH\\Modules\\Account\\Controllers\\AccountC.php', 67, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Modules\Account\Controllers\AccountC->render_edit_profile()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Account\Controllers\AccountC))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 23:10:12 --> Undefined offset: 0
+in APPPATH\Modules\Account\Controllers\AccountC.php on line 67.
+ 1 APPPATH\Modules\Account\Controllers\AccountC.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'APPPATH\\Modules\\Account\\Controllers\\AccountC.php', 67, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Modules\Account\Controllers\AccountC->render_edit_profile()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Account\Controllers\AccountC))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 23:10:49 --> Undefined offset: 0
+in APPPATH\Modules\Account\Controllers\AccountC.php on line 67.
+ 1 APPPATH\Modules\Account\Controllers\AccountC.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'APPPATH\\Modules\\Account\\Controllers\\AccountC.php', 67, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Modules\Account\Controllers\AccountC->render_edit_profile()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Account\Controllers\AccountC))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-19 23:12:41 --> Call to undefined method App\Modules\Account\Models\AccountM::edit_user_daata
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Modules\Account\Controllers\AccountC.php(122): CodeIgniter\Model->__call('edit_user_daata', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Modules\Account\Controllers\AccountC->edit_data_user()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Account\Controllers\AccountC))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
